@@ -7,4 +7,6 @@ The main ingredients of the new framework, called DEtection TRansformer or DETR,
 The main motive behind DETR is effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode prior knowledge about the task and makes the process complex and computationally expensive
    
 
-DETR uses a special loss called Bipartite Matching loss where it assigns one ground truth bbox to a predicted box using a matcher , thus when fine tuning the hungarian matcher(provided by sourcecode) and also the fucntion SetCriterion which gives Bipartite matching loss for backpropogation are used.
+DETR uses a special loss called Bipartite Matching loss where it assigns one ground truth bbox to a predicted box using a matcher , thus when fine tuning the hungarian matcher(provided by sourcecode) and also the fucntion SetCriterion which gives Bipartite matching loss for backpropogation are used.  
+
+[!output](./wheat.png)
