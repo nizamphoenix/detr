@@ -6,8 +6,10 @@ The main ingredients of the new framework, called DEtection TRansformer or DETR,
 
 The main motive behind DETR is effectively removing the need for many hand-designed components like a non-maximum suppression procedure or anchor generation that explicitly encode prior knowledge about the task and makes the process complex and computationally expensive
    
-
-DETR uses a special loss called Bipartite Matching loss where it assigns one ground truth bbox to a predicted box using a matcher , thus when fine tuning the hungarian matcher(provided by sourcecode) and also the fucntion SetCriterion which gives Bipartite matching loss for backpropogation are used.  
+DETR uses a special loss called Bipartite Matching loss where it assigns one ground truth bbox to a predicted box using a matcher , thus when fine tuning the hungarian matcher(provided by sourcecode) and also the fucntion SetCriterion which gives Bipartite matching loss for backpropogation are used.DETR calcuates three individual losses :  
+- Classification Loss for labels(its weight can be set by loss_ce)
+- Bbox Loss (its weight can be set by loss_bbox)
+- Loss for Background class
 
 For this exercise, I used a ResNet backbone along with 5-fold stratified CV strategy to obtain results. WBF is used to ensemble the 5 models trained on 5 folds of data.  
 
