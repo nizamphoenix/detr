@@ -9,4 +9,4 @@ The main motive behind DETR is effectively removing the need for many hand-desig
 
 DETR uses a special loss called Bipartite Matching loss where it assigns one ground truth bbox to a predicted box using a matcher , thus when fine tuning the hungarian matcher(provided by sourcecode) and also the fucntion SetCriterion which gives Bipartite matching loss for backpropogation are used.  
 
-[!output](./wheat.png)
+![output](./wheat.png)
